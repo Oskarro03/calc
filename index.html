@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kalkulator</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <p class="a">KM / Spalanie x Cena</p>
+            <br><br><br><br>
+        <input class="aa" type="number" id="spalanie" placeholder="podaj spalanie">
+        <input class="bb" type="number" id="km" placeholder="podaj dystans">
+        <button onclick="start()">Oblicz</button>
+            <br><hr class="a">
+            <div></div>
+    <script>
+            const bodyEl = document.querySelector("div");
+        function start(){
+
+        let car = {
+            spalanie: + document.getElementById("spalanie").value,
+            km: + document.getElementById("km").value,
+            benzyna95: 6.09,
+            benzyna98: 6.32,
+            diesel: 6.11,
+            gaz: 3.28,
+            spalaniekm: function() {
+                return this.km / this.spalanie;
+            },
+            pb95: function() {
+                return this.spalaniekm() * this.benzyna95;
+            },
+            pb98: function() {
+                return this.spalaniekm() * this.benzyna98;
+            },
+            on: function() {
+                return this.spalaniekm() * this.diesel;
+            },
+            lpg: function() {
+                return this.spalaniekm() * this.gaz;
+            },
+        };
+        let zdanie = `<div class="b"> Jeżeli twój pojazd pali <i>${car.spalanie}</i> litrów na 100 km to po przejecahniu <i>${car.km}</i> km spali <i>${car.spalaniekm().toFixed(2)}</i> litrów paliwa.</div>
+        <br>
+        <div class="a">Benzyna 95<br>
+        Za pokonanie takiego dystansu zapłacisz <i>${car.pb95().toFixed(2)}</i> zł.</div>
+        <div class="a">Benzyna 98<br>
+        Za pokonanie takiego dystansu zapłacisz <i>${car.pb98().toFixed(2)}</i> zł.</div>
+        <div class="a">Diesel<br>
+        Za pokonanie takiego dystansu zapłacisz <i>${car.on().toFixed(2)}</i> zł.</div>
+        <div class="a">Gaz</h2><br>
+        Za pokonanie takiego dystansu zapłacisz <i>${car.lpg().toFixed(2)}</i> zł.</div>
+        `;
+            bodyEl.innerHTML = zdanie;
+        } 
+        start()
+    </script>
+    <hr class="b">
+    <input class="cc" type="button" value="Odśwież" onClick="location.reload();" />
+</body>
+</html>
