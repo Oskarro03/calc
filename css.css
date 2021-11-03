@@ -39,7 +39,7 @@ button:hover {
 p.a {
     margin: 15px 0;
     text-align: center;
-    font-size: 4.4vh;
+    font-size: 4vh;
     color: wheat;
 }
 p.a:nth-child(1) {
