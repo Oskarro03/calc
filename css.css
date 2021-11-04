@@ -24,41 +24,20 @@ button {
     text-transform: uppercase;
     overflow: hidden;
     letter-spacing: 5px;
-    border: none;
+    border-color: #03e9f4;
     background: #050801;
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 button:hover {
     background: #03e9f4;
     color: #050801;
+    border-color: #03e9f4;
     box-shadow: 0 0 5px #03e9f4,
                 0 0 20px #03e9f4,
                 0 0 40px #03e9f4,
-                0 0 200px #03e9f4;
+                0 0 80px #03e9f4;
 }
-p.a {
-    margin: 15px 0;
-    text-align: center;
-    font-size: 4vh;
-    color: wheat;
-}
-p.a:nth-child(1) {
-    top: 0;
-    left: -90%;
-    width: 90%;
-    height: 2px;
-    background:  #03e9f4;
-}
-input.aa {
-    background-color: #0c4b4e;
-    color: #f308df;
-    text-align: center;
-    margin: 5px;
-    width: 170px;
-    height: 32px;
-    margin-top: -40px;
-}
-input.bb {
+input.first {
     background-color: #0c4b4e;
     color: #f308df;
     text-align: center;
@@ -71,48 +50,74 @@ input.bb {
     height: 32px;
     color: rgb(81, 245, 245);
 }
-div {
-    font-family: Geneva; 
-    background-color: transparent ;
-}
-div.b {
-    font-size: 19px;
-    color: wheat;
+input.last {
+    background-color: rgb(125, 126, 126);
+    color: rgb(63, 3, 68);
     text-align: center;
-    margin: -10px 20px;
-    font-family: monospace;
-    
-}
-div.a {
-    font-size: 18px;
-    color: wheat;
-    text-align: center;
-    margin: 20px 20px;
+    margin: 10px;
+    height: 30px;
+    width: 80px;
+    font-size: 100%;
 }
 i {
     font-size: 20px;
     background-color: transparent ;
 }
-input.cc {
-    background-color: rgb(125, 126, 126);
-    color: rgb(63, 3, 68);
+hr.pierwszy {
+    width: 95%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: 0px;
+    background: #03e9f4;
+    height: 2px;
+}
+hr.drugi {
+    width: 95%;
+    margin-top: 35px;
+    border: 0px;
+    background: #03e9f4;
+    height: 2px;
+}
+hr.trzeci {
+    width: 95%;
+    margin: 5px;
+    border: 0px;
+    background: #03e9f4;
+    height: 2px;
+}
+div.naglowek {
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
-    margin: 17px;
-    height: 30px;
-    width: 80px;
-    font-size: 100%;
+    font-size: 6.5vw;
+    color: wheat;
 }
-hr.b {
-    width: 90%;
-    margin: -4px;
-    border: 0px;
-    background: #03e9f4;
-    height: 2px;
+div.guzik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
 }
-hr.a {
-    width: 90%;
-    margin: 26px;
-    border: 0px;
-    background: #03e9f4;
-    height: 2px;
+div.inputy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+div {
+    font-family: Geneva; 
+    background-color: transparent ;
+}
+div.tekst {
+    font-size: 19px;
+    color: wheat;
+    text-align: center;
+    margin: 10px 20px;
+    font-family: monospace;
+}
+div.a {
+    font-size: 19px;
+    color: wheat;
+    text-align: center;
+    margin: 15px 20px;
 }
