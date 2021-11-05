@@ -27,9 +27,10 @@
                 spalanie: + document.getElementById("spalanie").value,
                 km: + document.getElementById("km").value,
                 benzyna95: 6.09,
-                benzyna98: 6.32,
-                diesel: 6.11,
-                gaz: 3.28,
+                benzyna98: 6.35,
+                diesel: 6.10,
+                dieselv: 6.36,
+                gaz: 3.35,
             spalaniekm: function() {
                 return this.spalanie/100 * this.km;
             },
@@ -41,6 +42,9 @@
             },
             on: function() {
                 return this.spalaniekm() * this.diesel;
+            },
+            onv: function() {
+                return this.spalaniekm() * this.dieselv;
             },
             lpg: function() {
                 return this.spalaniekm() * this.gaz;
@@ -54,6 +58,8 @@
         Za pokonanie takiego dystansu zapłacisz <i>${car.pb98().toFixed(2)}</i> zł.</div>
         <div class="a">Diesel<br>
         Za pokonanie takiego dystansu zapłacisz <i>${car.on().toFixed(2)}</i> zł.</div>
+        <div class="a">Diesel V-power<br>
+        Za pokonanie takiego dystansu zapłacisz <i>${car.onv().toFixed(2)}</i> zł.</div>
         <div class="a">Gaz<br>
         Za pokonanie takiego dystansu zapłacisz <i>${car.lpg().toFixed(2)}</i> zł.</div>
         `;
