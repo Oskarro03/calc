@@ -1,0 +1,166 @@
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #10585c;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#050801, #050801, transparent) ;
+}
+button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0;
+    color: #03e9f4;
+    font-size: 20px;
+    font-family: consolas;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 5px;
+    box-sizing: border-box;
+    width: 150px;
+    height: 50px;
+    border-color: #03e9f4;
+    border-style: solid;
+    background: #050801;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+button:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    background: #03e9f4;
+    color: #050801;
+    border-color: none;
+    box-shadow: 0 0 8px #03e9f4,
+                0 0 20px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 80px #03e9f4;
+}
+button:active {
+    transition: 0.2s;
+    background: transparent;
+    color: #03e9f4;
+    box-shadow: 0 0 8px #03e9f4,
+                0 0 20px #03e9f4,
+                0 0 40px #03e9f4,
+                0 0 80px #03e9f4,
+            inset 0 0 20px #03e9f4;
+}
+input.first {
+    background-color: #0c4b4e;
+    color: #f308df;
+    text-align: center;
+    width: 170px;
+    height: 32px;
+}
+::placeholder {
+    text-align: center;
+    width: 170px;
+    height: 32px;
+    color: rgb(81, 245, 245);
+}
+input.last {
+    background-color: rgb(125, 126, 126);
+    color: rgb(63, 3, 68);
+    text-align: center;
+    margin: 10px;
+    height: 30px;
+    width: 80px;
+    font-size: 100%;
+}
+input.powrot {
+    background-color: rgb(93, 128, 128);
+    border-color: rgb(93, 128, 128);
+    color: rgb(41, 9, 44);
+    text-align: center;
+    margin: 10px;
+    height: 28px;
+    width: 200px;
+    font-size: 100%;
+}
+i {
+    font-size: 20px;
+    background-color: transparent ;
+}
+hr.pierwszy {
+    width: 95%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: 0px;
+    background: #03e9f4;
+    height: 2px;
+}
+hr.drugi {
+    width: 95%;
+    margin-top: 35px;
+    border: 0px;
+    background: #03e9f4;
+    height: 2px;
+}
+hr.trzeci {
+    width: 95%;
+    margin: 5px;
+    border: 0px;
+    background: #03e9f4;
+    height: 2px;
+}
+div.naglowek {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-size: 4.5vw;
+    color: wheat;
+}
+@media (max-width: 400px) {
+    div.naglowek {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        font-size: 6.5vw;
+        color: wheat;
+    }
+    div.inputy {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        gap: 7px;
+    }
+}
+div.guzik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div.inputy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+div {
+    font-family: Geneva; 
+    background-color: transparent ;
+}
+div.tekst {
+    font-size: 19px;
+    color: wheat;
+    text-align: center;
+    margin: 10px 20px;
+    font-family: monospace;
+}
+div.a {
+    font-size: 19px;
+    color: wheat;
+    text-align: center;
+    margin: 15px 20px;
+}

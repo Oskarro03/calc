@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CarCalc</title>
+        <link rel="stylesheet" href="css4.css">
+</head>
+<body>
+    <hr class="pierwszy">
+    <div class="naglowek">Przelicznik Km na Mile</div>
+    <hr class="pierwszy">
+        <div class="guzik">
+            <div class="inputy">
+                <input class="first" type="number" id="kmnamile" placeholder="podaj Km">
+                <input class="first" type="number" id="milenakm" placeholder="podaj Mile">
+            </div>
+                <button onclick="start()">Oblicz</button>
+        </div>
+    <hr class="drugi">
+        <div id="tekst"></div>
+    <script>
+            const bodyEl = document.querySelector("#tekst");
+    function start(){
+        let car = {
+                kmnamile: + document.getElementById("kmnamile").value,
+                milenakm: + document.getElementById("milenakm").value,
+            kmmile: function() {
+                return this.kmnamile * 1.609344;
+            },
+            milekm: function() {
+                return this.milenakm * 0.6213727366498067;
+            },
+        };
+        let zdanie = `<div class="tekst"><i>${car.kmnamile}</i> Km to <i>${car.kmmile().toFixed(2)}</i> Mil. <br>
+            <i>${car.milenakm}</i> Mil to <i>${car.milekm().toFixed(2)}</i> Km.</div>`;
+            bodyEl.innerHTML = zdanie;
+    } 
+        start()
+    </script>
+        <hr class="pierwszy">
+        <div class="naglowek">Przelicznik Kw na KM</div>
+        <hr class="pierwszy">
+        <div class="guzik">
+            <div class="inputy">
+                <input class="first" type="number" id="kmnakw" placeholder="podaj KM">
+                <input class="first" type="number" id="kwnakm" placeholder="podaj KW">
+            </div>
+                <button onclick="start1()">Oblicz</button>
+        </div>
+    <hr class="drugi">
+        <div id="tekst1"></div>
+    <script>
+            const bodyEl1 = document.querySelector("#tekst1");
+    function start1(){
+        let car1 = {
+                kmnakw: + document.getElementById("kmnakw").value,
+                kwnakm: + document.getElementById("kwnakm").value,
+            kmkw: function() {
+                return this.kmnakw * 0.73549875;
+            },
+            kwkm: function() {
+                return this.kwnakm * 1.3596216173039044;
+            },
+        };
+        let zdanie = `<div class="tekst"><i>${car1.kmnakw}</i> KM to <i>${car1.kmkw().toFixed(2)}</i> KW. <br
+            <i>${car1.kwnakm}</i> KW to <i>${car1.kwkm().toFixed(2)}</i> KM.</div>`;
+            bodyEl1.innerHTML = zdanie;
+    } 
+        start1()
+    </script>
+        <hr class="trzeci">
+    <input class="last" type="button" value="Odśwież" onClick="location.reload();" />
+    <input class="powrot" type="button" value="Powrót na stronę główną" onclick="location.href='/index_glowny.html'">
+</body>
+</html>

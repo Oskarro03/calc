@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CarCalc</title>
+        <link rel="stylesheet" href="css2.css">
+</head>
+<body>
+    <hr class="pierwszy">
+    <div class="naglowek">Kalkulator średniego spalania</div>
+    <hr class="pierwszy">
+        <div class="guzik">
+            <div class="inputy">
+                <input class="first" type="number" id="spalanie" placeholder="podaj spalone paliwo">
+                <input class="first" type="number" id="km" placeholder="podaj pokonany dystans">
+            </div>
+                <button onclick="start()">Oblicz</button>
+        </div>
+    <hr class="drugi">
+        <div id="tekst"></div>
+    <script>
+            const bodyEl = document.querySelector("#tekst");
+    function start(){
+        let car = {
+                spalanie: + document.getElementById("spalanie").value,
+                km: + document.getElementById("km").value,
+            spalaniekm: function() {
+                return this.spalanie/this.km *100;
+            },
+        };
+        let zdanie = `<div class="tekst"> Jeżeli twój pojazd spalił <i>${car.spalanie}</i> litrów po przejechaniu <i>${car.km}</i> km twoje średnie spalanie na tej trasie wyniosło: <i>${car.spalaniekm().toFixed(2)}</i> litrów na 100km.</div>`;
+            bodyEl.innerHTML = zdanie;
+    } 
+        start()
+    </script>
+        <hr class="trzeci">
+    <input class="last" type="button" value="Odśwież" onClick="location.reload();" />
+    <input class="powrot" type="button" value="Powrót na stronę główną" onclick="location.href='/index_glowny.html'">
+</body>
+</html>
