@@ -15,7 +15,7 @@
             <div class="inputy">
                 <input class="first" type="number" id="spalanie" placeholder="podaj spalanie">
                 <input class="first" type="number" id="km" placeholder="podaj dystans">
-                <input class="first" type="number" id="cena" placeholder="podaj cenę paliwa" value="6.67">
+                <input class="first" type="number" id="cena" placeholder="podaj cenę paliwa" value="6.29">
             </div>
                 <button onclick="start()">Oblicz</button>
         </div>
@@ -28,11 +28,11 @@
                 spalanie: + document.getElementById("spalanie").value,
                 km: + document.getElementById("km").value,
                 cena: + document.getElementById("cena").value,
-                benzyna95: 6.67,
-                benzyna98: 7.61,
-                diesel: 7.35,
-                dieselv: 7.86,
-                gaz: 3.67,
+                benzyna95: 6.29,
+                benzyna98: 6.92,
+                diesel: 6.81,
+                dieselv: 7.13,
+                gaz: 3.39,
             spalaniekm: function() {
                 return this.spalanie/100 * this.km;
             },
